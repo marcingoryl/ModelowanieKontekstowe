@@ -1,0 +1,13 @@
+start
+    let model be StrefaKontroliRzeki
+    atr iD1
+    atr iD2
+    atr iD3
+    atr iD4
+    atr idL0kalizacja
+    create
+stop
+
+
+
+
