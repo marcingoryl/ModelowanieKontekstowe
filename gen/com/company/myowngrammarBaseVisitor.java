@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/IdeaProjects/Parser/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
@@ -31,19 +31,26 @@ public class myowngrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> impl
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssign(myowngrammarParser.AssignContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCreateModel(myowngrammarParser.CreateModelContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignatr(myowngrammarParser.AssignatrContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCreateParam(myowngrammarParser.CreateParamContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCreate(myowngrammarParser.CreateContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCreateEvent(myowngrammarParser.CreateEventContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitAssingParamsWithModel(myowngrammarParser.AssingParamsWithModelContext ctx) { return visitChildren(ctx); }
 }

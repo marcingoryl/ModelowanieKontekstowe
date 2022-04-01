@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/IdeaProjects/Parser/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -28,33 +28,43 @@ public interface myowngrammarListener extends ParseTreeListener {
 	 */
 	void exitStatement(myowngrammarParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link myowngrammarParser#assign}.
+	 * Enter a parse tree produced by {@link myowngrammarParser#createModel}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssign(myowngrammarParser.AssignContext ctx);
+	void enterCreateModel(myowngrammarParser.CreateModelContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link myowngrammarParser#assign}.
+	 * Exit a parse tree produced by {@link myowngrammarParser#createModel}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssign(myowngrammarParser.AssignContext ctx);
+	void exitCreateModel(myowngrammarParser.CreateModelContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link myowngrammarParser#assignatr}.
+	 * Enter a parse tree produced by {@link myowngrammarParser#createParam}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignatr(myowngrammarParser.AssignatrContext ctx);
+	void enterCreateParam(myowngrammarParser.CreateParamContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link myowngrammarParser#assignatr}.
+	 * Exit a parse tree produced by {@link myowngrammarParser#createParam}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignatr(myowngrammarParser.AssignatrContext ctx);
+	void exitCreateParam(myowngrammarParser.CreateParamContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link myowngrammarParser#create}.
+	 * Enter a parse tree produced by {@link myowngrammarParser#createEvent}.
 	 * @param ctx the parse tree
 	 */
-	void enterCreate(myowngrammarParser.CreateContext ctx);
+	void enterCreateEvent(myowngrammarParser.CreateEventContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link myowngrammarParser#create}.
+	 * Exit a parse tree produced by {@link myowngrammarParser#createEvent}.
 	 * @param ctx the parse tree
 	 */
-	void exitCreate(myowngrammarParser.CreateContext ctx);
+	void exitCreateEvent(myowngrammarParser.CreateEventContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link myowngrammarParser#assingParamsWithModel}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssingParamsWithModel(myowngrammarParser.AssingParamsWithModelContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link myowngrammarParser#assingParamsWithModel}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssingParamsWithModel(myowngrammarParser.AssingParamsWithModelContext ctx);
 }

@@ -1,11 +1,34 @@
 start
-    let model be StrefaKontroliRzeki
-    atr iD1
-    atr iD2
-    atr iD3
-    atr iD4
-    atr idL0kalizacja
-    create
+model Rzeka1Sekcja1
+    param idPodmiotu
+    param nazwaPodmiotu
+    param czas
+    param lokalizacjaPodmiotu
+    param idKontekstu
+    param stan
+
+    createModelWithParams
+
+    event blaheWzburzenie
+    event zdarzenieNieKrytyczne
+    event zdarzenieKrytyczne
+    event zagrozenieBezpieczenstwa
+
+model Rzeka1Sekcja2
+    param idPodmiotu
+    param nazwaPodmiotu
+    param czas
+    param lokalizacjaPodmiotu
+    param idKontekstu
+    param stan
+
+    createModelWithParams
+
+    event blaheWzburzenie
+    event zdarzenieNieKrytyczne
+    event zdarzenieKrytyczne
+    event zagrozenieBezpieczenstwa
+
 stop
 
 

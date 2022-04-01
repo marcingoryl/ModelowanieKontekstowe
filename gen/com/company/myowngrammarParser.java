@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/IdeaProjects/Parser/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -17,28 +17,27 @@ public class myowngrammarParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, ID=7, NUMBER=8, ATRNAME=9, 
-		WS=10;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, NAME=7, WS=8;
 	public static final int
-		RULE_program = 0, RULE_statement = 1, RULE_assign = 2, RULE_assignatr = 3, 
-		RULE_create = 4;
+		RULE_program = 0, RULE_statement = 1, RULE_createModel = 2, RULE_createParam = 3, 
+		RULE_createEvent = 4, RULE_assingParamsWithModel = 5;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"program", "statement", "assign", "assignatr", "create"
+			"program", "statement", "createModel", "createParam", "createEvent", 
+			"assingParamsWithModel"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'start'", "'stop'", "'let'", "'be'", "'atr'", "'create'"
+			null, "'start'", "'stop'", "'model'", "'param'", "'event'", "'createModelWithParams'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, null, "ID", "NUMBER", "ATRNAME", 
-			"WS"
+			null, null, null, null, null, null, null, "NAME", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -125,23 +124,23 @@ public class myowngrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(10);
+			setState(12);
 			match(T__0);
-			setState(12); 
+			setState(14); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(11);
+				setState(13);
 				statement();
 				}
 				}
-				setState(14); 
+				setState(16); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__4) | (1L << T__5))) != 0) );
-			setState(16);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__3) | (1L << T__4) | (1L << T__5))) != 0) );
+			setState(18);
 			match(T__1);
 			}
 		}
@@ -157,14 +156,17 @@ public class myowngrammarParser extends Parser {
 	}
 
 	public static class StatementContext extends ParserRuleContext {
-		public AssignContext assign() {
-			return getRuleContext(AssignContext.class,0);
+		public CreateModelContext createModel() {
+			return getRuleContext(CreateModelContext.class,0);
 		}
-		public AssignatrContext assignatr() {
-			return getRuleContext(AssignatrContext.class,0);
+		public CreateParamContext createParam() {
+			return getRuleContext(CreateParamContext.class,0);
 		}
-		public CreateContext create() {
-			return getRuleContext(CreateContext.class,0);
+		public AssingParamsWithModelContext assingParamsWithModel() {
+			return getRuleContext(AssingParamsWithModelContext.class,0);
+		}
+		public CreateEventContext createEvent() {
+			return getRuleContext(CreateEventContext.class,0);
 		}
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -189,28 +191,35 @@ public class myowngrammarParser extends Parser {
 		StatementContext _localctx = new StatementContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_statement);
 		try {
-			setState(21);
+			setState(24);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__2:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(18);
-				assign();
+				setState(20);
+				createModel();
 				}
 				break;
-			case T__4:
+			case T__3:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(19);
-				assignatr();
+				setState(21);
+				createParam();
 				}
 				break;
 			case T__5:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(20);
-				create();
+				setState(22);
+				assingParamsWithModel();
+				}
+				break;
+			case T__4:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(23);
+				createEvent();
 				}
 				break;
 			default:
@@ -228,54 +237,37 @@ public class myowngrammarParser extends Parser {
 		return _localctx;
 	}
 
-	public static class AssignContext extends ParserRuleContext {
-		public List<TerminalNode> ID() { return getTokens(myowngrammarParser.ID); }
-		public TerminalNode ID(int i) {
-			return getToken(myowngrammarParser.ID, i);
-		}
-		public TerminalNode NUMBER() { return getToken(myowngrammarParser.NUMBER, 0); }
-		public AssignContext(ParserRuleContext parent, int invokingState) {
+	public static class CreateModelContext extends ParserRuleContext {
+		public TerminalNode NAME() { return getToken(myowngrammarParser.NAME, 0); }
+		public CreateModelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_assign; }
+		@Override public int getRuleIndex() { return RULE_createModel; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterAssign(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterCreateModel(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitAssign(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitCreateModel(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitAssign(this);
+			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitCreateModel(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final AssignContext assign() throws RecognitionException {
-		AssignContext _localctx = new AssignContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_assign);
-		int _la;
+	public final CreateModelContext createModel() throws RecognitionException {
+		CreateModelContext _localctx = new CreateModelContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_createModel);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(23);
-			match(T__2);
-			setState(24);
-			match(ID);
-			setState(25);
-			match(T__3);
 			setState(26);
-			_la = _input.LA(1);
-			if ( !(_la==ID || _la==NUMBER) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
+			match(T__2);
+			setState(27);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -289,37 +281,37 @@ public class myowngrammarParser extends Parser {
 		return _localctx;
 	}
 
-	public static class AssignatrContext extends ParserRuleContext {
-		public TerminalNode ATRNAME() { return getToken(myowngrammarParser.ATRNAME, 0); }
-		public AssignatrContext(ParserRuleContext parent, int invokingState) {
+	public static class CreateParamContext extends ParserRuleContext {
+		public TerminalNode NAME() { return getToken(myowngrammarParser.NAME, 0); }
+		public CreateParamContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_assignatr; }
+		@Override public int getRuleIndex() { return RULE_createParam; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterAssignatr(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterCreateParam(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitAssignatr(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitCreateParam(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitAssignatr(this);
+			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitCreateParam(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final AssignatrContext assignatr() throws RecognitionException {
-		AssignatrContext _localctx = new AssignatrContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_assignatr);
+	public final CreateParamContext createParam() throws RecognitionException {
+		CreateParamContext _localctx = new CreateParamContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_createParam);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(28);
-			match(T__4);
 			setState(29);
-			match(ATRNAME);
+			match(T__3);
+			setState(30);
+			match(NAME);
 			}
 		}
 		catch (RecognitionException re) {
@@ -333,33 +325,77 @@ public class myowngrammarParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CreateContext extends ParserRuleContext {
-		public CreateContext(ParserRuleContext parent, int invokingState) {
+	public static class CreateEventContext extends ParserRuleContext {
+		public TerminalNode NAME() { return getToken(myowngrammarParser.NAME, 0); }
+		public CreateEventContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_create; }
+		@Override public int getRuleIndex() { return RULE_createEvent; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterCreate(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterCreateEvent(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitCreate(this);
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitCreateEvent(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitCreate(this);
+			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitCreateEvent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CreateContext create() throws RecognitionException {
-		CreateContext _localctx = new CreateContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_create);
+	public final CreateEventContext createEvent() throws RecognitionException {
+		CreateEventContext _localctx = new CreateEventContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_createEvent);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(31);
+			setState(32);
+			match(T__4);
+			setState(33);
+			match(NAME);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AssingParamsWithModelContext extends ParserRuleContext {
+		public AssingParamsWithModelContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assingParamsWithModel; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).enterAssingParamsWithModel(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof myowngrammarListener ) ((myowngrammarListener)listener).exitAssingParamsWithModel(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof myowngrammarVisitor ) return ((myowngrammarVisitor<? extends T>)visitor).visitAssingParamsWithModel(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AssingParamsWithModelContext assingParamsWithModel() throws RecognitionException {
+		AssingParamsWithModelContext _localctx = new AssingParamsWithModelContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_assingParamsWithModel);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(35);
 			match(T__5);
 			}
 		}
@@ -375,16 +411,17 @@ public class myowngrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\f$\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\6\2\17\n\2\r\2\16\2\20\3\2\3\2\3\3"+
-		"\3\3\3\3\5\3\30\n\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\6\3\6\3\6\2\2\7"+
-		"\2\4\6\b\n\2\3\3\2\t\n\2!\2\f\3\2\2\2\4\27\3\2\2\2\6\31\3\2\2\2\b\36\3"+
-		"\2\2\2\n!\3\2\2\2\f\16\7\3\2\2\r\17\5\4\3\2\16\r\3\2\2\2\17\20\3\2\2\2"+
-		"\20\16\3\2\2\2\20\21\3\2\2\2\21\22\3\2\2\2\22\23\7\4\2\2\23\3\3\2\2\2"+
-		"\24\30\5\6\4\2\25\30\5\b\5\2\26\30\5\n\6\2\27\24\3\2\2\2\27\25\3\2\2\2"+
-		"\27\26\3\2\2\2\30\5\3\2\2\2\31\32\7\5\2\2\32\33\7\t\2\2\33\34\7\6\2\2"+
-		"\34\35\t\2\2\2\35\7\3\2\2\2\36\37\7\7\2\2\37 \7\13\2\2 \t\3\2\2\2!\"\7"+
-		"\b\2\2\"\13\3\2\2\2\4\20\27";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n(\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\6\2\21\n\2\r\2\16\2\22\3\2"+
+		"\3\2\3\3\3\3\3\3\3\3\5\3\33\n\3\3\4\3\4\3\4\3\5\3\5\3\5\3\6\3\6\3\6\3"+
+		"\7\3\7\3\7\2\2\b\2\4\6\b\n\f\2\2\2%\2\16\3\2\2\2\4\32\3\2\2\2\6\34\3\2"+
+		"\2\2\b\37\3\2\2\2\n\"\3\2\2\2\f%\3\2\2\2\16\20\7\3\2\2\17\21\5\4\3\2\20"+
+		"\17\3\2\2\2\21\22\3\2\2\2\22\20\3\2\2\2\22\23\3\2\2\2\23\24\3\2\2\2\24"+
+		"\25\7\4\2\2\25\3\3\2\2\2\26\33\5\6\4\2\27\33\5\b\5\2\30\33\5\f\7\2\31"+
+		"\33\5\n\6\2\32\26\3\2\2\2\32\27\3\2\2\2\32\30\3\2\2\2\32\31\3\2\2\2\33"+
+		"\5\3\2\2\2\34\35\7\5\2\2\35\36\7\t\2\2\36\7\3\2\2\2\37 \7\6\2\2 !\7\t"+
+		"\2\2!\t\3\2\2\2\"#\7\7\2\2#$\7\t\2\2$\13\3\2\2\2%&\7\b\2\2&\r\3\2\2\2"+
+		"\4\22\32";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

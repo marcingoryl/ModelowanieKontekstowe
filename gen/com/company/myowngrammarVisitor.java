@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/IdeaProjects/Parser/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -23,21 +23,27 @@ public interface myowngrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatement(myowngrammarParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link myowngrammarParser#assign}.
+	 * Visit a parse tree produced by {@link myowngrammarParser#createModel}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssign(myowngrammarParser.AssignContext ctx);
+	T visitCreateModel(myowngrammarParser.CreateModelContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link myowngrammarParser#assignatr}.
+	 * Visit a parse tree produced by {@link myowngrammarParser#createParam}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignatr(myowngrammarParser.AssignatrContext ctx);
+	T visitCreateParam(myowngrammarParser.CreateParamContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link myowngrammarParser#create}.
+	 * Visit a parse tree produced by {@link myowngrammarParser#createEvent}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCreate(myowngrammarParser.CreateContext ctx);
+	T visitCreateEvent(myowngrammarParser.CreateEventContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link myowngrammarParser#assingParamsWithModel}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssingParamsWithModel(myowngrammarParser.AssingParamsWithModelContext ctx);
 }
