@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/CtxM.g4 by ANTLR 4.9.2
 package com.company;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -45,7 +45,7 @@ public class myowngrammarBaseListener implements myowngrammarListener {
 	@Override
 	public void enterCreateEvent(myowngrammarParser.CreateEventContext ctx) {
 		System.out.println();
-		System.out.println("public void " + ctx.getText() + "() " + " {");
+		System.out.println("public void " + ctx.getText() + "() " + " {" + "\n" + "	System.out.println('" + ctx.getText() + "');");
 	}
 
 	@Override

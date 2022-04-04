@@ -9,7 +9,7 @@ model Rzeka1Sekcja1
 
     createModelWithParams
 
-    event blaheWzburzenie
+    event blacheWzbudzenie
     event zdarzenieNieKrytyczne
     event zdarzenieKrytyczne
     event zagrozenieBezpieczenstwa
@@ -24,7 +24,7 @@ model Rzeka1Sekcja2
 
     createModelWithParams
 
-    event blaheWzburzenie
+    event blacheWzbudzenie
     event zdarzenieNieKrytyczne
     event zdarzenieKrytyczne
     event zagrozenieBezpieczenstwa

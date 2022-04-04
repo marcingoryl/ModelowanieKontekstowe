@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/CtxM.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 

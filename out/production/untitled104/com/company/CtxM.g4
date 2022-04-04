@@ -1,6 +1,5 @@
-grammar myowngrammar;
+grammar CtxM;
 program   : 'start' statement+ 'stop';
-
 
 statement : createModel | createParam | assingParamsWithModel | createEvent;
 
@@ -9,7 +8,5 @@ createParam    :  'param' NAME;
 createEvent: 'event' NAME;
 assingParamsWithModel    :  'createModelWithParams';
 
-
 NAME     : [a-zA-Z0-9]+ ;
-
 WS     : [ \n\t]+ -> skip;

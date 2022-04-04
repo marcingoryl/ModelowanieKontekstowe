@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         // args [0] - path to java file to be translated
-        CharStream stream = CharStreams.fromFileName("src/com/company/begin.txt"); //args[0]
+        CharStream stream = CharStreams.fromFileName("src/com/company/rzeki.txt"); //args[0]
 
         // Get our lexer
         myowngrammarLexer lexer = new myowngrammarLexer(stream);

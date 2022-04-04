@@ -16,16 +16,20 @@ public Rzeka1Sekcja1(String idPodmiotu, String nazwaPodmiotu, String czas, Strin
 	this.stan = stan;
 	}
 
-public void eventblaheWzburzenie()  {
+public void eventblacheWzbudzenie()  {
+	System.out.println('eventblacheWzbudzenie');
 }
 
 public void eventzdarzenieNieKrytyczne()  {
+	System.out.println('eventzdarzenieNieKrytyczne');
 }
 
 public void eventzdarzenieKrytyczne()  {
+	System.out.println('eventzdarzenieKrytyczne');
 }
 
 public void eventzagrozenieBezpieczenstwa()  {
+	System.out.println('eventzagrozenieBezpieczenstwa');
 }
 class Rzeka1Sekcja2 {
 	String idPodmiotu;
@@ -45,16 +49,20 @@ public Rzeka1Sekcja2(String idPodmiotu, String nazwaPodmiotu, String czas, Strin
 	this.stan = stan;
 	}
 
-public void eventblaheWzburzenie()  {
+public void eventblacheWzbudzenie()  {
+	System.out.println('eventblacheWzbudzenie');
 }
 
 public void eventzdarzenieNieKrytyczne()  {
+	System.out.println('eventzdarzenieNieKrytyczne');
 }
 
 public void eventzdarzenieKrytyczne()  {
+	System.out.println('eventzdarzenieKrytyczne');
 }
 
 public void eventzagrozenieBezpieczenstwa()  {
+	System.out.println('eventzagrozenieBezpieczenstwa');
 }
 
 }

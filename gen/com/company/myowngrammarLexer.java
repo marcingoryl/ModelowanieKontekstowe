@@ -1,4 +1,4 @@
-// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/myowngrammar.g4 by ANTLR 4.9.2
+// Generated from /Users/marcin/Desktop/ModelowanieKontekstowe/ModelowanieKontekstowe/src/com/company/CtxM.g4 by ANTLR 4.9.2
 package com.company;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -85,7 +85,7 @@ public class myowngrammarLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "myowngrammar.g4"; }
+	public String getGrammarFileName() { return "CtxM.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
